@@ -3,658 +3,486 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>F7 Mirar Prime — Cartas contempladas, consórcio e seguros</title>
-<meta name="description" content="Cartas de consórcio contempladas, cotas e seguros de carro, casa e vida com análise transparente. Fale com um especialista F7 Mirar Prime.">
-<meta property="og:title" content="F7 Mirar Prime — Crédito já liberado para a sua próxima conquista">
-<meta property="og:description" content="Cartas contempladas, cotas de consórcio e seguros auto, vida e residencial.">
-<meta property="og:image" content="images/hero.jpg">
-<meta name="theme-color" content="#0B1437">
+<title>F7 Mirar Prime — Soluções Financeiras</title>
+<meta name="description" content="Crédito, cartas contempladas, consórcio, financiamento e seguros com atendimento consultivo. Fale com Fábio Miranda, 20 anos de experiência em crédito.">
+<meta property="og:title" content="F7 Mirar Prime — Crédito começa no planejamento">
+<meta property="og:description" content="Atendimento consultivo para pessoas e empresas: crédito, aquisição, proteção e planejamento.">
+<meta property="og:image" content="images/consultoria.jpg">
+<meta name="theme-color" content="#0B1E3B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F6F4EF;font-family:'Manrope',system-ui,sans-serif;color:#0B1437}
-a{color:#0B1437}a:hover{color:#9A6B00}
-.btn-gold:hover{background:#FFD066 !important;transform:translateY(-2px)}
-.btn-ghost:hover{background:rgba(255,255,255,0.14) !important}
-.lift{transition:transform .35s ease, box-shadow .35s ease}
-.lift:hover{transform:translateY(-6px);box-shadow:0 30px 60px -20px rgba(11,20,55,0.35) !important}
-.zoom img{transition:transform .8s ease}
-.zoom:hover img{transform:scale(1.05)}
-@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-.rise2{animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) both}
-.rise3{animation:rise .9s .3s cubic-bezier(.2,.7,.2,1) both}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
-.live{animation:pulse 2s infinite}
-input:focus,select:focus{outline:2px solid #F5B82E;outline-offset:2px}
-
 html{scroll-behavior:smooth}
-*{box-sizing:border-box}
-img{max-width:100%}
-section,footer,header>nav,header>div{scroll-margin-top:20px}
-/* containers centrados em telas largas */
-@media (min-width:1600px){section,header>nav,header>div,footer{padding-left:calc((100vw - 1440px)/2 + 80px)!important;padding-right:calc((100vw - 1440px)/2 + 80px)!important}
-#cotas,#topo>section[style*="margin: 0 80px"]{margin-left:calc((100vw - 1440px)/2 + 80px)!important;margin-right:calc((100vw - 1440px)/2 + 80px)!important;padding-left:72px!important;padding-right:72px!important}}
+[hidden]{display:none!important}
+section[id]{scroll-margin-top:80px}
+body{margin:0;background:#FFFFFF;font-family:'Manrope',system-ui,sans-serif;color:#0B1E3B}
+a{color:#0B1E3B}a:hover{color:#8A6A00}
+.f7{--navy:#0B1E3B;--navy2:#12294D;--gold:#C9A227;--goldt:#8A6A00;--gray:#F3F5F8;--line:#E3E7EE;--muted:#55627A;width:100%;overflow:hidden;background:#fff}
+.f7 *{box-sizing:border-box}
+.f7 img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.eyebrow{display:block;font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--goldt);margin-bottom:14px}
+h1,h2,h3{font-family:'Sora',sans-serif;margin:0;letter-spacing:-.02em}
+h2{font-size:44px;line-height:1.1;font-weight:700;color:var(--navy);max-width:760px}
+h2.h-sm{font-size:28px;line-height:1.2}
+h3{font-size:18px;font-weight:700}
+.muted{color:var(--muted);font-size:16px;line-height:1.7;margin:16px 0 0}
+.sub{margin-top:14px;margin-bottom:44px}
+.mt{margin-top:44px}
+.sec{padding:100px 0}
+.sec.gray{background:var(--gray)}
+.sec.navy{background:var(--navy);color:#fff}
+.sec.navy h2{color:#fff}.sec.navy .eyebrow{color:var(--gold)}
+.sub.light{color:#C2CCDD;font-size:16px}
+/* header */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.brand{font-family:'Sora',sans-serif;font-weight:800;font-size:20px;letter-spacing:.04em;color:var(--navy);text-decoration:none}
+.brand span{color:var(--gold)}.brand.light{color:#fff;margin-bottom:14px}
+.menu{display:flex;gap:30px}.menu a{text-decoration:none;font-size:15px;font-weight:600;color:var(--navy)}
+.menu a:hover{color:var(--goldt)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 26px;border-radius:12px;font-weight:800;font-size:15px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#0B1E3B}.btn-gold:hover{background:#DDB532;color:#0B1E3B;box-shadow:0 12px 30px -12px rgba(201,162,39,.7)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy2);color:#fff}
+.btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}.btn-outline:hover{background:rgba(255,255,255,.1);color:#fff}
+.btn-sm{padding:12px 20px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 85% 20%,#1D3E73 0%,transparent 60%),linear-gradient(135deg,#081733 0%,#0B1E3B 55%,#13305C 100%);color:#fff;padding:90px 0 100px}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:60px;line-height:1.05;font-weight:800;color:#fff}
+.hero h1 em{font-style:normal;color:var(--gold);display:block}
+.lead{font-size:18px;line-height:1.7;color:#C9D3E6;margin:24px 0 0;max-width:560px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-img{border-radius:28px;overflow:hidden;aspect-ratio:4/5;max-height:560px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.12)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+/* split */
+.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.ph-photo{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#D9E0EA 0%,#9AA9C0 100%);display:flex;align-items:center;justify-content:center;color:#fff}
+.ph-photo.tall{aspect-ratio:4/5}
+.ph-inner{opacity:.75}
+.tag{position:absolute;left:14px;bottom:14px;background:rgba(11,30,59,.82);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 11px;border-radius:8px;backdrop-filter:blur(6px)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.stat{border:1px solid var(--line);border-radius:16px;padding:20px;background:#fff}
+.stat strong{display:block;font-family:'Sora',sans-serif;font-size:24px;color:var(--navy)}
+.stat span{display:block;font-size:13px;color:var(--muted);margin-top:6px;line-height:1.45}
+/* grids & cards */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(11,30,59,.35)}
+.card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#DCE2EB}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.card:hover .card-img img{transform:scale(1.06)}
+.card-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex-grow:1}
+.card-body p{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+.pill{align-self:flex-start;background:#FBEFC7;color:#6B5200;font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.price{font-size:22px}
+.link{margin-top:auto;padding-top:8px;font-weight:800;font-size:14px;color:var(--navy);text-decoration:none}
+/* steps */
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px 22px 28px;transition:background .3s ease}
+.step:hover{background:rgba(255,255,255,.09)}
+.step b{display:block;font-family:'Sora',sans-serif;font-size:26px;color:var(--gold);margin-bottom:12px}
+.step h3{color:#fff;margin-bottom:8px}
+.step p{margin:0;font-size:14px;line-height:1.6;color:#C2CCDD}
+/* simulator */
+.sim{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
+.sim-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px;box-shadow:0 40px 80px -50px rgba(11,30,59,.45);display:flex;flex-direction:column}
+.sim-card .muted{margin:12px 0 10px}
+.sim-card label{font-size:13px;font-weight:800;color:var(--navy);margin:16px 0 8px}
+.sim-card input,.sim-card select{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #D4DAE4;font-size:16px;font-family:inherit;background:#fff;color:var(--navy)}
+.sim-card input:focus,.sim-card select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.sim-card .btn{margin-top:26px;align-self:flex-start}
+.sim-side{position:relative;border-radius:24px;overflow:hidden;min-height:560px;background:#DCE2EB}
+.sim-side>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sim-res{position:absolute;inset:16px;border-radius:20px;background:rgba(8,23,51,.88);backdrop-filter:blur(14px);color:#fff;padding:30px;display:flex;flex-direction:column;gap:16px;overflow:auto}
+.sim-res .eyebrow{color:var(--gold);margin:0}
+.res-big{font-family:'Sora',sans-serif;font-size:38px;font-weight:800;letter-spacing:-.02em;line-height:1.05}
+.res-sub{font-size:13px;color:#AFC0DB}
+.res-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.res-grid div{background:rgba(255,255,255,.07);border-radius:12px;padding:12px 14px}
+.res-grid small{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#AFC0DB}
+.res-grid b{display:block;font-family:'Sora',sans-serif;font-size:17px;margin-top:4px}
+.res-msg{font-size:14px;line-height:1.6;color:#DCE4F2;margin:0}
+.res-note{font-size:11px;line-height:1.5;color:#8FA1BF;margin:0}
+.sim-res .btn{align-self:flex-start}
+/* why */
+.why{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px 28px;color:var(--goldt)}
+.why h3{color:var(--navy);margin:14px 0 8px}
+.why p{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+.why .big{display:block;font-family:'Sora',sans-serif;font-size:30px;line-height:30px;color:var(--navy)}
+/* quotes */
+.quote{margin:0;border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff}
+.quote .avatar{width:44px;height:44px;border-radius:50%;background:#C9D2DF;margin-bottom:16px}
+.quote p{margin:0 0 14px;line-height:1.6}.quote cite{font-style:normal;font-size:13px;color:var(--muted)}
+/* duo */
+.duo{position:relative;display:block;border-radius:24px;overflow:hidden;aspect-ratio:16/10;text-decoration:none;color:#fff}
+.duo img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.duo:hover img{transform:scale(1.05)}
+.duo-txt{position:absolute;left:0;right:0;bottom:0;padding:70px 30px 28px;background:linear-gradient(180deg,rgba(8,23,51,0) 0%,rgba(8,23,51,.95) 70%)}
+.duo-txt h3{font-size:28px;color:#fff}.duo-txt p{margin:6px 0 0;color:#D3DBEA;font-size:15px}
+.duo:hover{color:#fff}
+/* cta */
+.cta{background:radial-gradient(900px 400px at 80% 0%,#1D3E73 0%,transparent 60%),linear-gradient(135deg,#081733 0%,#0B1E3B 60%,#163463 100%);padding:100px 0;text-align:center;color:#fff}
+.cta-in{display:flex;flex-direction:column;align-items:center}
+.cta .eyebrow{color:var(--gold)}
+.cta h2{color:#fff;font-size:48px}
+.cta p{color:#C9D3E6;font-size:17px;line-height:1.7;max-width:600px;margin:18px 0 30px}
+/* footer */
+.foot{background:#06122A;color:#AFC0DB;padding:64px 0 36px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px}
+.foot p{font-size:14px;line-height:1.7;margin:0}
+.foot h4{color:#fff;font-family:'Sora',sans-serif;font-size:15px;margin:0 0 14px}
+.foot a{display:block;color:#AFC0DB;text-decoration:none;font-size:14px;margin-bottom:9px}.foot a:hover{color:var(--gold)}
+.foot-copy{border-top:1px solid #1A2A4A;margin-top:40px;padding-top:24px;font-size:12px;line-height:1.6}
+/* motion */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero-txt>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-txt>*:nth-child(2){animation-delay:.08s}.hero-txt>*:nth-child(3){animation-delay:.16s}.hero-txt>*:nth-child(4){animation-delay:.24s}
+.hero-img{animation:rise 1s .2s cubic-bezier(.2,.7,.2,1) both}
+/* responsivo */
 @media (max-width:1100px){
- [style*="grid-template-columns: repeat(3"],[style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
- h1{font-size:54px!important}
+ .g5{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hero h1{font-size:48px}
+ h2{font-size:36px}
+ .menu{gap:20px}
 }
-@media (max-width:760px){
- [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important;gap:18px!important}
- section,header>nav,footer{padding-left:20px!important;padding-right:20px!important;padding-top:64px!important;padding-bottom:64px!important}
- header>nav{padding-top:18px!important;padding-bottom:18px!important}
- header>nav>div a:not(.btn-gold){display:none}
- header>nav .btn-gold{padding:11px 16px!important;font-size:14px}
- header{height:auto!important;min-height:100svh}
- header>div{padding-left:20px!important;padding-right:20px!important;margin-left:20px!important;margin-right:20px!important}
- header>div:nth-of-type(2){padding:40px 20px 24px!important;margin:0!important}
- header>div:last-of-type{margin:0 20px 32px!important;padding:0!important}
- h1{font-size:40px!important}
- h2{font-size:32px!important}
- h3{font-size:24px!important}
- [style*="justify-content: space-between; align-items: flex-end"]{flex-direction:column;align-items:flex-start!important;gap:20px!important}
- #cotas,section[style*="margin: 0 80px"]{margin:0 16px!important;padding:36px 22px!important;border-radius:26px!important}
- article[style*="height: 620px"]{height:560px!important}
- article[style*="height: 440px"]{height:auto!important;min-height:620px}
- article[style*="height: 440px"]>div:last-child{width:100%!important;padding:28px!important;justify-content:flex-end!important;top:auto!important}
- article[style*="height: 440px"]>div:nth-of-type(1){background:linear-gradient(180deg,rgba(7,12,36,.1) 0%,rgba(7,12,36,.95) 55%)!important}
- article>div[style*="padding: 40px"]{padding:26px!important}
- [style*="display: flex; gap: 14px"]{flex-wrap:wrap}
- form{padding:26px!important}
- footer>div:first-child{flex-direction:column;align-items:flex-start!important;gap:20px}
- footer>div:first-child>div:last-child{flex-wrap:wrap;gap:16px!important}
+@media (max-width:820px){
+ .menu{display:none}
+ .hero{padding:56px 0 64px}
+ .hero-in,.split,.sim{grid-template-columns:1fr;gap:36px}
+ .hero-img{aspect-ratio:4/3}
+ .ph-photo.tall{aspect-ratio:4/3}
+ .g3,.g2{grid-template-columns:1fr}
+ .g5{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .sim-side{min-height:520px}
+}
+@media (max-width:560px){
+ .wrap{padding:0 20px}
+ .sec{padding:64px 0}
+ .hero h1{font-size:38px}
+ h2,.cta h2{font-size:30px}
+ .lead{font-size:16px}
+ .g4,.g5,.stats{grid-template-columns:1fr}
+ .hero-ctas .btn{width:100%}
+ .topbar-in{height:64px}
+ .brand{font-size:17px}
+ .btn-sm{padding:10px 14px;font-size:13px}
+ .sim-card{padding:24px}
+ .sim-card .btn{align-self:stretch}
+ .sim-side{min-height:300px}
+ .sim-res{position:relative;inset:auto;margin:10px;padding:22px;overflow:visible}
+ .res-big{font-size:30px}
+ .foot-grid{grid-template-columns:1fr}
+ .duo{aspect-ratio:4/5}
 }
 
-/* simulador responsivo */
-#simulador input[type=range]{height:28px}
-@media (max-width:1100px){
- #simulador [style*="width: 440px"]{width:100%!important;border-right:none!important;border-bottom:1px solid #E6E2D8}
- #simulador>div:nth-of-type(2)>div:nth-of-type(2){flex-direction:column}
-}
-@media (max-width:760px){
- #simulador>div:nth-of-type(2)>div:first-child{padding:0 8px!important;overflow-x:auto}
- #tabA,#tabB{flex:1 1 0;padding:18px 6px 14px!important;font-size:11px!important;letter-spacing:.04em!important;white-space:normal;line-height:1.3}
- #simulador [style*="width: 440px"]{padding:24px 20px!important}
- #simulador [style*="padding: 36px 40px"]{padding:24px 20px!important;border-right:none!important;border-bottom:1px solid #E6E2D8}
- #simulador [style*="font-size: 52px"]{font-size:38px!important}
- #simulador [style*="font-size: 44px"]{font-size:30px!important}
- #simulador [style*="padding: 24px 28px"]{padding:18px 20px!important;border-right:none!important;border-bottom:1px solid #E6E2D8}
- #simulador [style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0!important}
- #simulador [style*="grid-template-columns: repeat(2"]{gap:0}
- #simulador div[style*="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
- #simulador [style*="padding: 30px 40px"]{padding:22px 20px!important}
- #simulador [style*="margin: 28px 40px 32px"]{margin:20px!important;flex-direction:column;align-items:stretch!important;gap:18px!important;text-align:left}
- #simulador [style*="margin: 28px 40px 32px"] a{text-align:center}
-}
 </style>
 </head>
 <body>
-<div id="topo" style="width: 100%; display: flex; flex-direction: column; background: #F6F4EF; overflow: hidden">
+<div class="f7">
 
-<!-- ============ HERO ============ -->
-<header style="position: relative; height: 860px; display: flex; flex-direction: column; background: #0B1437; overflow: hidden">
-<img src="images/hero.jpg" alt="Casa moderna iluminada ao anoitecer com SUV na garagem" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%">
-<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,12,36,0.94) 0%, rgba(7,12,36,0.78) 42%, rgba(7,12,36,0.15) 100%)"></div>
-
-<nav style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 28px 80px">
-<a href="#topo" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #FFFFFF">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: #F5B82E; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 18px; color: #0B1437">F7</div>
-<div style="display: flex; flex-direction: column; line-height: 1.05">
-<span style="font-family: 'Sora', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.02em">Mirar Prime</span>
-<span style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C9D1EA">Crédito &amp; Proteção</span>
-</div>
-</a>
-<div style="display: flex; align-items: center; gap: 36px; font-size: 15px; font-weight: 600">
-<a href="#cartas" style="color: #E6EAF7; text-decoration: none">Cartas contempladas</a>
-<a href="#simulador" style="color: #E6EAF7; text-decoration: none">Simulador</a>
-<a href="#cotas" style="color: #E6EAF7; text-decoration: none">Cotas</a>
-<a href="#seguros" style="color: #E6EAF7; text-decoration: none">Seguros</a>
-<a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener" class="btn-gold" style="background: #F5B82E; color: #0B1437; text-decoration: none; padding: 13px 22px; border-radius: 999px; transition: all .25s">Falar com especialista</a>
-</div>
+<!-- HEADER -->
+<header class="topbar">
+<div class="wrap topbar-in">
+<a href="#inicio" class="brand">F7 MIRAR <span>PRIME</span></a>
+<nav class="menu" aria-label="Principal">
+<a href="#solucoes">Soluções</a>
+<a href="#cartas">Cartas</a>
+<a href="#simulador">Simulador</a>
+<a href="#seguros">Seguros</a>
+<a href="#sobre">Sobre</a>
 </nav>
-
-<div style="position: relative; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 80px 40px; gap: 28px; max-width: 760px">
-<div class="rise" style="display: flex; align-items: center; gap: 10px; align-self: flex-start; padding: 8px 16px 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); backdrop-filter: blur(10px); color: #FFFFFF; font-size: 14px; font-weight: 600">
-<span class="live" style="width: 9px; height: 9px; border-radius: 50%; background: #22C55E"></span>
-Cartas contempladas disponíveis agora
-</div>
-<h1 class="rise2" style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 72px; line-height: 1.02; letter-spacing: -0.03em; color: #FFFFFF">Crédito já liberado para a sua próxima <span style="color: #F5B82E">conquista.</span></h1>
-<p class="rise3" style="margin: 0; font-size: 20px; line-height: 1.6; color: #D5DBEE; max-width: 600px">Cartas de consórcio contempladas, cotas para planejar e seguros de carro, casa e vida — tudo analisado com transparência pela F7 Mirar Prime, para você decidir com números na mão.</p>
-<div class="rise3" style="display: flex; gap: 14px">
-<a href="#cartas" class="btn-gold" style="background: #F5B82E; color: #0B1437; text-decoration: none; padding: 18px 30px; border-radius: 14px; font-weight: 700; font-size: 16px; transition: all .25s; display: flex; align-items: center; gap: 10px">Ver cartas disponíveis
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-</a>
-<a href="#seguros" class="btn-ghost" style="color: #FFFFFF; text-decoration: none; padding: 18px 30px; border-radius: 14px; font-weight: 700; font-size: 16px; border: 1px solid rgba(255,255,255,0.35); transition: all .25s">Cotar seguro</a>
-</div>
-</div>
-
-<div style="position: relative; margin: 0 80px 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 900px">
-<div style="padding: 20px 24px; border-radius: 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(14px); display: flex; flex-direction: column; gap: 4px">
-<span style="font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 700; color: #F5B82E">R$ 341 mil+</span>
-<span style="font-size: 14px; color: #C9D1EA">em crédito por carta, já contemplado</span>
-</div>
-<div style="padding: 20px 24px; border-radius: 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(14px); display: flex; flex-direction: column; gap: 4px">
-<span style="font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 700; color: #F5B82E">32% de entrada</span>
-<span style="font-size: 14px; color: #C9D1EA">na opção de menor entrada hoje</span>
-</div>
-<div style="padding: 20px 24px; border-radius: 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(14px); display: flex; flex-direction: column; gap: 4px">
-<span style="font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 700; color: #F5B82E">R$ 2.916/mês</span>
-<span style="font-size: 14px; color: #C9D1EA">na opção de menor parcela</span>
-</div>
+<a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="btn btn-navy btn-sm">Falar com Fábio</a>
 </div>
 </header>
 
-<!-- ============ COMO FUNCIONA ============ -->
-<section style="padding: 120px 80px 100px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 60px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #9A6B00">O que é uma carta contemplada</span>
-<h2 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 48px; line-height: 1.08; letter-spacing: -0.02em; font-weight: 700">Pule a fila do sorteio. O crédito já está aprovado.</h2>
+<!-- HERO -->
+<section id="inicio" class="hero">
+<div class="wrap hero-in">
+<div class="hero-txt">
+<span class="eyebrow">F7 Mirar Prime • Soluções financeiras</span>
+<h1>Crédito não começa na proposta. <em>Começa no planejamento.</em></h1>
+<p class="lead">Atendimento consultivo para pessoas e empresas, conectando crédito, aquisição, proteção e planejamento às necessidades de cada cliente.</p>
+<div class="hero-ctas">
+<a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="btn btn-gold">Quero falar com um especialista</a>
+<a href="#solucoes" class="btn btn-outline">Conhecer soluções</a>
 </div>
-<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4A5373; max-width: 480px">Uma carta contemplada é uma cota de consórcio que já foi sorteada ou venceu o lance. Você assume a cota pagando uma entrada ao titular atual e passa a usar o crédito — sem esperar meses ou anos pela contemplação.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
-<div class="lift" style="padding: 36px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; justify-content: space-between; align-items: center">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #0B1437; color: #F5B82E; display: flex; align-items: center; justify-content: center">
-<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
-</div>
-<span style="font-family: 'Sora', sans-serif; font-size: 40px; font-weight: 800; color: #E6E2D8">01</span>
-</div>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700">Escolha a carta</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #4A5373">Compare crédito, entrada, número de parcelas e saldo devedor. Nós mostramos o custo total de cada opção.</p>
-</div>
-<div class="lift" style="padding: 36px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; justify-content: space-between; align-items: center">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #0B1437; color: #F5B82E; display: flex; align-items: center; justify-content: center">
-<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6M9 14l2 2 4-4"></path></svg>
-</div>
-<span style="font-family: 'Sora', sans-serif; font-size: 40px; font-weight: 800; color: #E6E2D8">02</span>
-</div>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700">Transferência segura</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #4A5373">A entrada é paga e a cota é transferida para o seu nome com anuência da administradora e contrato formal.</p>
-</div>
-<div class="lift" style="padding: 36px; border-radius: 24px; background: #0B1437; border: 1px solid #0B1437; display: flex; flex-direction: column; gap: 18px; color: #FFFFFF">
-<div style="display: flex; justify-content: space-between; align-items: center">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #F5B82E; color: #0B1437; display: flex; align-items: center; justify-content: center">
-<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10M10 20v-6h4v6"></path></svg>
-</div>
-<span style="font-family: 'Sora', sans-serif; font-size: 40px; font-weight: 800; color: #26325E">03</span>
-</div>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700">Use o crédito</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9D1EA">Compre o imóvel, quite um financiamento ou construa — e siga pagando só as parcelas restantes da cota.</p>
+<div class="hero-img">
+<img src="images/consultoria.jpg" alt="Consultor financeiro conversando com um casal em escritório">
 </div>
 </div>
 </section>
 
-<!-- ============ CARTAS ============ -->
-<section id="cartas" style="padding: 100px 80px 110px; background: #0B1437; color: #FFFFFF; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 60px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #F5B82E">Oportunidades da semana</span>
-<h2 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 48px; line-height: 1.08; letter-spacing: -0.02em; font-weight: 700">Três cartas, três perfis. Qual combina com o seu caixa?</h2>
+<!-- EXPERIÊNCIA -->
+<section class="sec">
+<div class="wrap split">
+<div class="ph-photo tall">
+<div class="ph-inner"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></div>
+<span class="tag">Foto profissional — Fábio Miranda</span>
 </div>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #C9D1EA; max-width: 440px">Abaixo de cada carta, a nossa leitura: quanto você paga no total, quanto isso representa sobre o crédito e para quem ela faz mais sentido.</p>
+<div class="split-txt">
+<span class="eyebrow">Experiência que orienta</span>
+<h2>20 anos de experiência em crédito.</h2>
+<p class="muted">Uma nova marca construída sobre duas décadas de experiência, relacionamento e conhecimento do mercado. Na F7 Mirar Prime, cada conversa começa pelo objetivo do cliente.</p>
+<div class="stats">
+<div class="stat"><strong>20+</strong><span>anos de experiência</span></div>
+<div class="stat"><strong>PF + PJ</strong><span>soluções para pessoas e empresas</span></div>
+<div class="stat"><strong>Consultivo</strong><span>análise antes da proposta</span></div>
 </div>
-
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px">
-
-<!-- Carta 1 -->
-<article class="lift" style="border-radius: 28px; background: #141F4A; border: 1px solid #26325E; display: flex; flex-direction: column; overflow: hidden">
-<div style="padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: center">
-<span style="padding: 7px 14px; border-radius: 999px; background: #F5B82E; color: #0B1437; font-size: 13px; font-weight: 800">Menor custo total</span>
-<span style="font-size: 13px; color: #9FA9CC; font-weight: 600">GPR-5228</span>
-</div>
-<div class="zoom" style="margin: 20px 24px 0; border-radius: 18px; overflow: hidden; background: #F6F4EF">
-<img src="images/carta-gpr5228.png" alt="Carta contemplada Porto Seguro GPR-5228: crédito de R$ 459.600,00" style="display: block; width: 100%; height: auto">
-</div>
-<div style="padding: 24px; display: flex; flex-direction: column; gap: 18px; flex-grow: 1">
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700">Porto Seguro · R$ 459.600</h3>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Custo total</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">R$ 606.157</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Acima do crédito</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #F5B82E">+31,9%</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Prazo restante</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">≈ 8,6 anos</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Entrada</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">50,6%</span></div>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C9D1EA"><strong style="color: #FFFFFF">A oportunidade:</strong> é a carta mais barata do trio. Com R$ 232.576 de entrada e 103 parcelas de R$ 3.627, o custo total fica só 31,9% acima do crédito — o menor percentual entre as três.</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C9D1EA"><strong style="color: #FFFFFF">Para quem:</strong> investidor ou comprador com capital guardado que quer um imóvel de até R$ 460 mil e prefere quitar em menos de 9 anos pagando menos no total.</p>
-<a href="#contato" class="btn-gold" style="margin-top: auto; background: #F5B82E; color: #0B1437; text-decoration: none; padding: 15px; border-radius: 14px; font-weight: 700; text-align: center; transition: all .25s">Quero a GPR-5228</a>
-</div>
-</article>
-
-<!-- Carta 2 -->
-<article class="lift" style="border-radius: 28px; background: #141F4A; border: 1px solid #26325E; display: flex; flex-direction: column; overflow: hidden">
-<div style="padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: center">
-<span style="padding: 7px 14px; border-radius: 999px; background: #FFFFFF; color: #0B1437; font-size: 13px; font-weight: 800">Menor parcela</span>
-<span style="font-size: 13px; color: #9FA9CC; font-weight: 600">JEF-7339</span>
-</div>
-<div class="zoom" style="margin: 20px 24px 0; border-radius: 18px; overflow: hidden; background: #F6F4EF">
-<img src="images/carta-jef7339.png" alt="Carta contemplada Porto Seguro JEF-7339: crédito de R$ 460.000,00" style="display: block; width: 100%; height: auto">
-</div>
-<div style="padding: 24px; display: flex; flex-direction: column; gap: 18px; flex-grow: 1">
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700">Porto Seguro · R$ 460.000</h3>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Custo total</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">R$ 753.968</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Acima do crédito</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #F5B82E">+63,9%</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Prazo restante</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">≈ 15,3 anos</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Entrada</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">47,9%</span></div>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C9D1EA"><strong style="color: #FFFFFF">A oportunidade:</strong> o maior crédito do trio com a parcela mais leve — 183 × R$ 2.916 após R$ 220.340 de entrada. O prazo longo dilui o compromisso mensal, em troca de um custo total maior.</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C9D1EA"><strong style="color: #FFFFFF">Para quem:</strong> família que quer morar já num imóvel de R$ 460 mil e precisa de uma parcela que caiba com folga no orçamento — ou quem pretende amortizar com lances depois.</p>
-<a href="#contato" class="btn-gold" style="margin-top: auto; background: #F5B82E; color: #0B1437; text-decoration: none; padding: 15px; border-radius: 14px; font-weight: 700; text-align: center; transition: all .25s">Quero a JEF-7339</a>
-</div>
-</article>
-
-<!-- Carta 3 -->
-<article class="lift" style="border-radius: 28px; background: #141F4A; border: 1px solid #26325E; display: flex; flex-direction: column; overflow: hidden">
-<div style="padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: center">
-<span style="padding: 7px 14px; border-radius: 999px; background: #22C55E; color: #06230F; font-size: 13px; font-weight: 800">Menor entrada</span>
-<span style="font-size: 13px; color: #9FA9CC; font-weight: 600">HQB-0686</span>
-</div>
-<div class="zoom" style="margin: 20px 24px 0; border-radius: 18px; overflow: hidden; background: #F6F4EF">
-<img src="images/carta-hqb0686.png" alt="Carta contemplada CNP HQB-0686: crédito de R$ 341.500,00" style="display: block; width: 100%; height: auto">
-</div>
-<div style="padding: 24px; display: flex; flex-direction: column; gap: 18px; flex-grow: 1">
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700">CNP · R$ 341.500</h3>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Custo total</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">R$ 539.998</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Acima do crédito</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #F5B82E">+58,1%</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Prazo restante</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">≈ 7,8 anos</span></div>
-<div style="padding: 14px; border-radius: 14px; background: #0B1437; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #9FA9CC">Entrada</span><span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700">32%</span></div>
-</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C9D1EA"><strong style="color: #FFFFFF">A oportunidade:</strong> a porta de entrada mais acessível — R$ 109.290 liberam R$ 341.500 de crédito. São 94 parcelas de R$ 4.582, o prazo mais curto das três.</p>
-<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C9D1EA"><strong style="color: #FFFFFF">Para quem:</strong> quem tem pouco capital imobilizado mas boa renda mensal e quer sair do aluguel ou comprar o primeiro imóvel sem esperar anos por um sorteio.</p>
-<a href="#contato" class="btn-gold" style="margin-top: auto; background: #F5B82E; color: #0B1437; text-decoration: none; padding: 15px; border-radius: 14px; font-weight: 700; text-align: center; transition: all .25s">Quero a HQB-0686</a>
-</div>
-</article>
-</div>
-
-<p style="margin: 0; font-size: 13px; line-height: 1.6; color: #9FA9CC; max-width: 1100px">Custo total = entrada + soma das parcelas informadas. Não inclui reajustes anuais do saldo devedor pelo índice do grupo, taxa de transferência da administradora nem eventual seguro prestamista. Disponibilidade, valores e condições sujeitos à confirmação da administradora no momento da transferência.</p>
-</section>
-
-<!-- ============ COMO USAR ============ -->
-<section style="padding: 110px 80px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 80px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 22px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #9A6B00">Como usar a sua carta</span>
-<h2 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 46px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700">Um crédito, vários caminhos para o seu patrimônio.</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4A5373">As cartas acima são de consórcio imobiliário. O crédito pode ser usado em qualquer finalidade aceita pela administradora — e cartas marcadas com <strong>Junção</strong> podem ser somadas a outras para alcançar um crédito maior.</p>
-<div style="padding: 22px 24px; border-radius: 18px; background: #FFF6DE; border: 1px solid #F1D489; display: flex; gap: 16px; align-items: flex-start">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9A6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6"></path></svg>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A3A10"><strong>Dica F7:</strong> quem já paga um financiamento bancário pode usar a carta para quitá-lo e trocar juros por parcelas de consórcio. Fazemos essa simulação para você.</p>
-</div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px">
-<div class="lift" style="padding: 28px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 12px">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B1437" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path></svg>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700">Comprar imóvel</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5373">Novo ou usado, residencial ou comercial.</p>
-</div>
-<div class="lift" style="padding: 28px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 12px">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B1437" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"></path><path d="M18 15l2 2 3-3"></path></svg>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700">Quitar financiamento</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5373">Troque os juros do banco pela taxa do consórcio.</p>
-</div>
-<div class="lift" style="padding: 28px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 12px">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B1437" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V9l7-5 7 5v11"></path><path d="M9 20v-5h6v5"></path></svg>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700">Construir ou reformar</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5373">Terreno, obra ou ampliação, conforme regras do grupo.</p>
-</div>
-<div class="lift" style="padding: 28px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 12px">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B1437" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700">Investir e alugar</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5373">Use o aluguel do imóvel para ajudar a pagar as parcelas.</p>
 </div>
 </div>
 </section>
 
-<!-- ============ SIMULADOR ============ -->
-<section id="simulador" style="padding: 20px 80px 110px; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 60px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #9A6B00">Simulador de financiamento</span>
-<h2 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 46px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700">Quanto imóvel cabe no seu bolso?</h2>
+<!-- SOLUÇÕES -->
+<section id="solucoes" class="sec gray">
+<div class="wrap">
+<span class="eyebrow">Por onde começamos?</span>
+<h2>Encontre o caminho para o seu objetivo.</h2>
+<p class="muted sub">Em vez de começar pelo produto, começamos entendendo o que você pretende realizar.</p>
+<div class="grid g5">
+<article class="card"><div class="card-img"><img src="images/hero.jpg" alt="Casa moderna com carro na garagem"><span class="tag">Família • Imóvel</span></div><div class="card-body"><h3>Aquisição</h3><p>Consórcios, cartas contempladas e financiamentos para imóveis e veículos.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/assinatura.jpg" alt="Assinatura de contrato com chaves sobre a mesa"><span class="tag">Profissional</span></div><div class="card-body"><h3>Crédito</h3><p>Alternativas de crédito avaliadas conforme objetivo, perfil e condições da operação.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/empresa.jpg" alt="Empresário em seu escritório"><span class="tag">Empresário</span></div><div class="card-body"><h3>Empresas</h3><p>Crédito PJ, capital, financiamento, estruturação e soluções para crescimento.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/familia.jpg" alt="Família sorrindo em casa"><span class="tag">Família</span></div><div class="card-body"><h3>Proteção</h3><p>Seguros e soluções para proteger pessoas, veículos, imóveis e empresas.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/casa.jpg" alt="Sala de estar aconchegante"><span class="tag">Planejamento</span></div><div class="card-body"><h3>Planejamento</h3><p>Organização de caminhos financeiros para aquisição, patrimônio e projetos.</p></div></article>
 </div>
-<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4A5373; max-width: 480px">Simule em segundos pelo financiamento bancário — e veja quanto você pagaria só de juros. Depois, compare com uma carta contemplada.</p>
 </div>
+</section>
 
-<div style="border-radius: 32px; background: #FFFFFF; border: 1px solid #E6E2D8; box-shadow: 0 40px 80px -50px rgba(11,20,55,0.35); overflow: hidden; display: flex; flex-direction: column">
+<!-- METODOLOGIA -->
+<section class="sec navy">
+<div class="wrap">
+<span class="eyebrow">Nosso jeito de atender</span>
+<h2>Antes de oferecer uma solução, entendemos o objetivo.</h2>
+<p class="sub light">Uma metodologia simples, humana e transparente para organizar a conversa.</p>
+<div class="grid g5">
+<div class="step"><b>01</b><h3>Você conta</h3><p>Qual é o objetivo e o momento atual.</p></div>
+<div class="step"><b>02</b><h3>Analisamos</h3><p>Perfil, necessidade, prazo e cenário.</p></div>
+<div class="step"><b>03</b><h3>Avaliamos</h3><p>Alternativas disponíveis para o caso.</p></div>
+<div class="step"><b>04</b><h3>Comparamos</h3><p>Condições, características e caminhos.</p></div>
+<div class="step"><b>05</b><h3>Você decide</h3><p>Com informação clara para escolher.</p></div>
+</div>
+</div>
+</section>
 
-<div style="display: flex; gap: 8px; padding: 0 40px; border-bottom: 1px solid #E6E2D8; background: #FBFAF7">
-<button type="button" id="tabA" role="tab" style="padding: 26px 24px 22px; border: none; border-bottom: 3px solid #F5B82E; background: transparent; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0B1437; cursor: pointer">Quanto posso comprar?</button>
-<button type="button" id="tabB" role="tab" style="padding: 26px 24px 22px; border: none; border-bottom: 3px solid transparent; background: transparent; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5B6380; cursor: pointer">Qual renda preciso?</button>
+<!-- CARTAS -->
+<section id="cartas" class="sec gray">
+<div class="wrap">
+<span class="eyebrow">Oportunidades</span>
+<h2>Cartas contempladas disponíveis.</h2>
+<p class="muted sub">Exemplos de apresentação de produto. Condições devem ser confirmadas no atendimento.</p>
+<div class="grid g3">
+<article class="card"><div class="card-img"><img src="images/hero.jpg" alt="Imóvel residencial moderno"><span class="tag">Imóvel / Patrimônio</span></div><div class="card-body"><span class="pill">Carta contemplada</span><h3 class="price">R$ 459.600</h3><p>Entrada e parcelas conforme a condição da cota. Consulte disponibilidade.</p><a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="link">Consultar esta carta →</a></div></article>
+<article class="card"><div class="card-img"><img src="images/casa.jpg" alt="Interior de casa moderna"><span class="tag">Casa moderna</span></div><div class="card-body"><span class="pill">Carta contemplada</span><h3 class="price">R$ 388.150</h3><p>Uma alternativa para planejamento de aquisição. Consulte condições.</p><a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="link">Consultar esta carta →</a></div></article>
+<article class="card"><div class="card-img"><img src="images/assinatura.jpg" alt="Chaves e contrato sobre a mesa"><span class="tag">Patrimônio</span></div><div class="card-body"><span class="pill">Carta contemplada</span><h3 class="price">Consulte opções</h3><p>Outras cotas podem estar disponíveis conforme estoque e momento.</p><a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="link">Ver outras cartas →</a></div></article>
 </div>
+</div>
+</section>
 
-<div style="display: flex">
-<!-- entradas -->
-<div style="width: 440px; flex-shrink: 0; padding: 36px 40px; background: #FBFAF7; border-right: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 24px">
-<div data-mode="A">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="sim-renda" style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0B1437">Renda familiar mensal</label>
-<input id="sim-renda" type="text" inputmode="numeric" placeholder="R$ 0" style="padding: 16px 18px; border-radius: 14px; border: 1px solid #D5D0C3; font-size: 20px; font-weight: 700; font-family: inherit; background: #FFFFFF; color: #0B1437">
-<span style="font-size: 13px; color: #5B6380">Some a renda de quem vai compor o financiamento.</span>
+<!-- COMO FUNCIONA -->
+<section class="sec">
+<div class="wrap">
+<span class="eyebrow">Como funciona</span>
+<h2>Um processo simples e acompanhado.</h2>
+<div class="grid g3 mt">
+<article class="card"><div class="card-img"><img src="images/consultoria.jpg" alt="Consultor analisando opções com clientes"><span class="tag">Fábio analisando</span></div><div class="card-body"><h3>01 — Escolha</h3><p>Entendemos seu objetivo e avaliamos as alternativas disponíveis.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/assinatura.jpg" alt="Documentação sendo assinada"><span class="tag">Documentação</span></div><div class="card-body"><h3>02 — Transferência</h3><p>Orientação durante a documentação e as etapas da operação.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/hero.jpg" alt="Casa conquistada"><span class="tag">Realização</span></div><div class="card-body"><h3>03 — Utilize</h3><p>Com o crédito disponível, siga para a finalidade prevista na operação.</p></div></article>
 </div>
 </div>
-<div data-mode="B" hidden>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="sim-imovel" style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0B1437">Valor do imóvel</label>
-<input id="sim-imovel" type="text" inputmode="numeric" placeholder="R$ 0" style="padding: 16px 18px; border-radius: 14px; border: 1px solid #D5D0C3; font-size: 20px; font-weight: 700; font-family: inherit; background: #FFFFFF; color: #0B1437">
-<span style="font-size: 13px; color: #5B6380">Preço do imóvel que você quer comprar.</span>
-</div>
-</div>
+</section>
 
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0B1437">Entrada + FGTS</span>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="sim-entrada" style="font-size: 12px; font-weight: 700; color: #9A6B00">Entrada em R$</label>
-<input id="sim-entrada" type="text" inputmode="numeric" placeholder="R$ 0" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #D5D0C3; font-size: 16px; font-family: inherit; background: #FFFFFF; color: #0B1437; width: 100%; box-sizing: border-box">
+<!-- POSSIBILIDADES -->
+<section class="sec gray">
+<div class="wrap">
+<span class="eyebrow">Possibilidades</span>
+<h2>Um crédito, vários caminhos.</h2>
+<div class="grid g3 mt">
+<article class="card"><div class="card-img"><img src="images/casa.jpg" alt="Imóvel pronto para morar"><span class="tag">Imóvel</span></div><div class="card-body"><h3>Comprar</h3><p>Planejar a aquisição de um imóvel conforme seu projeto.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/assinatura.jpg" alt="Contrato e calculadora"><span class="tag">Documento</span></div><div class="card-body"><h3>Quitar ou reorganizar</h3><p>Avaliar alternativas quando o objetivo é reorganizar uma operação existente.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/obra.jpg" alt="Casa em construção"><span class="tag">Obra</span></div><div class="card-body"><h3>Construir ou reformar</h3><p>Estruturar recursos para transformar um projeto em patrimônio.</p></div></article>
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="sim-fgts" style="font-size: 12px; font-weight: 700; color: #9A6B00">FGTS disponível</label>
-<input id="sim-fgts" type="text" inputmode="numeric" placeholder="R$ 0" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #D5D0C3; font-size: 16px; font-family: inherit; background: #FFFFFF; color: #0B1437; width: 100%; box-sizing: border-box">
 </div>
-</div>
-<span style="font-size: 13px; color: #5B6380"><span data-v="entradaHint"></span></span>
-</div>
+</section>
 
-<div style="display: flex; flex-direction: column; gap: 10px">
-<div style="display: flex; justify-content: space-between; align-items: center">
-<label for="sim-pct" style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0B1437">Entrada em % do imóvel</label>
-<span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #9A6B00"><span data-v="pctEnt"></span>%</span>
-</div>
-<input id="sim-pct" type="range" min="0" max="80" step="5" value="20" style="width: 100%; accent-color: #C8961E">
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="sim-taxa" style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0B1437">Juros ao ano (%)</label>
-<input id="sim-taxa" type="text" inputmode="decimal" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #D5D0C3; font-size: 16px; font-family: inherit; background: #FFFFFF; color: #0B1437; width: 100%; box-sizing: border-box">
-</div>
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="sim-prazo" style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0B1437">Prazo</label>
-<select id="sim-prazo" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #D5D0C3; font-size: 16px; font-family: inherit; background: #FFFFFF; color: #0B1437; width: 100%; box-sizing: border-box">
-<option value="15">15 anos</option>
-<option value="20">20 anos</option>
-<option value="25">25 anos</option>
-<option value="30" selected>30 anos</option>
-<option value="35">35 anos</option>
+<!-- SIMULADOR -->
+<section id="simulador" class="sec">
+<div class="wrap sim">
+<form class="sim-card" onsubmit="return false">
+<span class="eyebrow">Planejamento</span>
+<h2 class="h-sm">Quanto imóvel cabe no seu planejamento?</h2>
+<p class="muted">Use estes campos como ponto de partida para uma conversa consultiva.</p>
+<label for="sim-renda">Renda mensal</label>
+<input id="sim-renda" type="text" inputmode="numeric" placeholder="R$ 0,00">
+<label for="sim-imovel">Valor aproximado do imóvel</label>
+<input id="sim-imovel" type="text" inputmode="numeric" placeholder="R$ 0,00">
+<label for="sim-entrada">Entrada disponível</label>
+<input id="sim-entrada" type="text" inputmode="numeric" placeholder="R$ 0,00">
+<label for="sim-prazo">Prazo desejado</label>
+<select id="sim-prazo">
+<option value="120">Até 120 meses</option>
+<option value="180">Até 180 meses</option>
+<option value="240">Até 240 meses</option>
+<option value="360">Até 360 meses</option>
+<option value="420">Até 420 meses</option>
 </select>
-</div>
-</div>
-
-<div style="display: flex; flex-direction: column; gap: 10px">
-<div style="display: flex; justify-content: space-between; align-items: center">
-<label for="sim-comp" style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0B1437">Renda comprometida</label>
-<span style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #9A6B00"><span data-v="comp"></span>%</span>
-</div>
-<input id="sim-comp" type="range" min="10" max="35" step="1" value="30" style="width: 100%; accent-color: #C8961E">
-<span style="font-size: 13px; color: #5B6380">Os bancos costumam aceitar até 30% da renda.</span>
-</div>
-</div>
-
-<!-- resultados -->
-<div style="flex-grow: 1; display: flex; flex-direction: column">
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid #E6E2D8">
-<div style="padding: 36px 40px; border-right: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9A6B00"><span data-v="bigLabel"></span></span>
-<span style="font-family: 'Sora', sans-serif; font-size: 52px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; color: #0B1437"><span data-v="bigVal"></span></span>
-<span style="font-size: 14px; color: #5B6380"><span data-v="bigSub"></span></span>
-</div>
-<div style="padding: 36px 40px; display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9A6B00"><span data-v="secLabel"></span></span>
-<span style="font-family: 'Sora', sans-serif; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: #0B1437"><span data-v="secVal"></span></span>
-<span style="font-size: 14px; color: #5B6380"><span data-v="secSub"></span></span>
-</div>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid #E6E2D8">
-<div style="padding: 24px 28px; border-right: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5B6380">Valor financiado</span>
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700"><span data-v="finTxt"></span></span>
-</div>
-<div style="padding: 24px 28px; border-right: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5B6380">Entrada + FGTS</span>
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700"><span data-v="entTxt"></span></span>
-</div>
-<div style="padding: 24px 28px; border-right: 1px solid #E6E2D8; display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5B6380">Juros no período</span>
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; color: #B45309"><span data-v="jurosTxt"></span></span>
-</div>
-<div style="padding: 24px 28px; display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5B6380">Total pago</span>
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700"><span data-v="totalTxt"></span></span>
-</div>
-</div>
-
-<div style="padding: 30px 40px; display: flex; flex-direction: column; gap: 14px; border-bottom: 1px solid #E6E2D8">
-<span id="sim-gauge-label" style="font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase"></span>
-<div style="position: relative; height: 14px; border-radius: 999px; background: linear-gradient(90deg, #BBF7D0 0%, #FEF08A 45%, #FED7AA 72%, #FECACA 100%)">
-<div id="sim-marker" style="position: absolute; top: 50%; left: 80%; transition: left .3s ease; width: 24px; height: 24px; margin-left: -12px; margin-top: -12px; border-radius: 50%; background: #0B1437; border: 3px solid #FFFFFF; box-shadow: 0 2px 8px rgba(11,20,55,0.35)"></div>
-</div>
-<div style="display: flex; justify-content: space-between; font-size: 13px; color: #5B6380"><span>Confortável</span><span>Moderado</span><span>Difícil</span></div>
-</div>
-
-<div style="margin: 28px 40px 32px; padding: 26px 28px; border-radius: 20px; background: #0B1437; color: #FFFFFF; display: flex; align-items: center; gap: 28px">
-<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700">Quer fugir dos <span data-v="jurosTxt"></span> de juros?</span>
-<span style="font-size: 15px; line-height: 1.55; color: #C9D1EA">Carta contemplada não cobra juros: você paga taxa de administração e reajuste do saldo. Um especialista compara as duas opções para você.</span>
-</div>
-<a id="sim-wa" href="https://wa.me/5511940249327" target="_blank" rel="noopener" class="btn-gold" style="flex-shrink: 0; background: #F5B82E; color: #0B1437; text-decoration: none; padding: 16px 24px; border-radius: 14px; font-weight: 800; transition: all .25s">Comparar no WhatsApp</a>
-</div>
-</div>
-</div>
-</div>
-<p style="margin: 0; font-size: 13px; line-height: 1.6; color: #5B6380; max-width: 1100px">Simulação estimada pela Tabela Price (parcelas fixas), com juros efetivos ao ano informados. Não inclui seguros obrigatórios (MIP e DFI), taxa de administração do banco nem correção pela TR. Aprovação, taxa e prazo dependem da análise de crédito do banco.</p>
-</section>
-
-<!-- ============ COTAS ============ -->
-<section id="cotas" style="margin: 0 80px; padding: 72px; border-radius: 36px; background: #FFFFFF; border: 1px solid #E6E2D8; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #9A6B00">Cotas de consórcio</span>
-<h2 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 42px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700">Não tem pressa? Planeje com uma cota nova.</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4A5373">Sem juros, sem entrada obrigatória: você paga parcelas mensais e concorre a sorteios e lances todo mês. Ideal para quem quer construir patrimônio com disciplina.</p>
-<a href="#contato" style="align-self: flex-start; background: #0B1437; color: #FFFFFF; text-decoration: none; padding: 16px 26px; border-radius: 14px; font-weight: 700">Simular uma cota</a>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 18px; align-items: center; padding: 20px 22px; border-radius: 18px; background: #F6F4EF">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: #0B1437; color: #F5B82E; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 800; flex-shrink: 0">%</div>
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Sem juros</span><span style="font-size: 14px; color: #4A5373">Apenas taxa de administração diluída no prazo.</span></div>
-</div>
-<div style="display: flex; gap: 18px; align-items: center; padding: 20px 22px; border-radius: 18px; background: #F6F4EF">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: #0B1437; color: #F5B82E; display: flex; align-items: center; justify-content: center; flex-shrink: 0">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"></path></svg>
-</div>
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Estratégia de lance</span><span style="font-size: 14px; color: #4A5373">Orientamos o melhor momento e valor para ofertar.</span></div>
-</div>
-<div style="display: flex; gap: 18px; align-items: center; padding: 20px 22px; border-radius: 18px; background: #F6F4EF">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: #0B1437; color: #F5B82E; display: flex; align-items: center; justify-content: center; flex-shrink: 0">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
-</div>
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Liquidez na saída</span><span style="font-size: 14px; color: #4A5373">Mudou de planos? A cota pode ser vendida.</span></div>
-</div>
-</div>
-</section>
-
-<!-- ============ SEGUROS ============ -->
-<section id="seguros" style="padding: 120px 80px 110px; display: flex; flex-direction: column; gap: 52px">
-<div style="display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #9A6B00">Seguros</span>
-<h2 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 48px; line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; max-width: 820px">Proteja o que você conquistou — e quem você ama.</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4A5373; max-width: 640px">Cotamos com as principais seguradoras e montamos a cobertura certa para o seu carro, a sua casa e a sua família.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px">
-<article class="lift zoom" style="position: relative; height: 620px; border-radius: 32px; overflow: hidden; background: #0B1437">
-<img src="images/carro.jpg" alt="Sedã azul-escuro em rua molhada à noite" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,12,36,0) 30%, rgba(7,12,36,0.95) 100%)"></div>
-<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px; display: flex; flex-direction: column; gap: 16px; color: #FFFFFF">
-<span style="align-self: flex-start; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px); font-size: 13px; font-weight: 700">Seguro Auto</span>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 34px; font-weight: 700; line-height: 1.12">Seu carro coberto, dia e noite.</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Colisão e roubo</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Terceiros</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Assistência 24h</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Carro reserva</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Vidros</span>
-</div>
-<a href="#contato" class="btn-gold" style="align-self: flex-start; margin-top: 6px; background: #F5B82E; color: #0B1437; text-decoration: none; padding: 15px 24px; border-radius: 14px; font-weight: 700; transition: all .25s">Cotar seguro auto</a>
-</div>
-</article>
-<article class="lift zoom" style="position: relative; height: 620px; border-radius: 32px; overflow: hidden; background: #0B1437">
-<img src="images/familia.jpg" alt="Família sorrindo junta na sala de casa" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,12,36,0) 30%, rgba(7,12,36,0.95) 100%)"></div>
-<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 40px; display: flex; flex-direction: column; gap: 16px; color: #FFFFFF">
-<span style="align-self: flex-start; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px); font-size: 13px; font-weight: 700">Seguro de Vida</span>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 34px; font-weight: 700; line-height: 1.12">A tranquilidade de saber que eles ficam bem.</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Morte natural e acidental</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Invalidez</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Doenças graves</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Assistência funeral</span>
-</div>
-<a href="#contato" class="btn-gold" style="align-self: flex-start; margin-top: 6px; background: #F5B82E; color: #0B1437; text-decoration: none; padding: 15px 24px; border-radius: 14px; font-weight: 700; transition: all .25s">Cotar seguro de vida</a>
-</div>
-</article>
-</div>
-<article class="lift zoom" style="position: relative; height: 440px; border-radius: 32px; overflow: hidden; background: #0B1437">
-<img src="images/casa.jpg" alt="Sala de estar moderna e aconchegante iluminada à noite" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%">
-<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,12,36,0.96) 0%, rgba(7,12,36,0.82) 40%, rgba(7,12,36,0.05) 75%)"></div>
-<div style="position: absolute; top: 0; bottom: 0; left: 0; width: 640px; padding: 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px; color: #FFFFFF">
-<span style="align-self: flex-start; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px); font-size: 13px; font-weight: 700">Seguro Residencial</span>
-<h3 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 36px; font-weight: 700; line-height: 1.12">Sua casa protegida — do telhado ao que está dentro dela.</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D1EA">Acabou de conquistar o imóvel com a sua carta? Proteja o investimento desde o primeiro dia.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Incêndio e raio</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Roubo e furto</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Danos elétricos</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Vendaval</span>
-<span style="padding: 8px 14px; border-radius: 10px; background: rgba(255,255,255,0.1); font-size: 14px">Chaveiro e encanador 24h</span>
-</div>
-<a href="#contato" class="btn-gold" style="align-self: flex-start; margin-top: 4px; background: #F5B82E; color: #0B1437; text-decoration: none; padding: 15px 24px; border-radius: 14px; font-weight: 700; transition: all .25s">Cotar seguro residencial</a>
-</div>
-</article>
-</section>
-
-<!-- ============ POR QUE F7 ============ -->
-<section style="margin: 0 80px; padding: 64px 72px; border-radius: 36px; background: #0B1437; color: #FFFFFF; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; color: #F5B82E">Transparência</span>
-<span style="font-size: 15px; line-height: 1.6; color: #C9D1EA">Custo total e percentual sobre o crédito em cada carta, antes de você decidir.</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; color: #F5B82E">Análise sob medida</span>
-<span style="font-size: 15px; line-height: 1.6; color: #C9D1EA">Comparamos cartas, cotas e financiamento com base no seu fluxo de caixa.</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; color: #F5B82E">Transferência segura</span>
-<span style="font-size: 15px; line-height: 1.6; color: #C9D1EA">Contrato formal e transferência feita com a administradora.</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; color: #F5B82E">Tudo num lugar</span>
-<span style="font-size: 15px; line-height: 1.6; color: #C9D1EA">Consórcio e seguros de carro, casa e vida com um só consultor.</span>
-</div>
-</section>
-
-<!-- ============ CONTATO ============ -->
-<section id="contato" style="padding: 120px 80px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 80px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 22px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #9A6B00">Fale com a F7</span>
-<h2 style="margin: 0; font-family: 'Sora', sans-serif; font-size: 52px; line-height: 1.05; letter-spacing: -0.02em; font-weight: 800">Reserve sua carta antes que outro cliente leve.</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4A5373">Cartas contempladas são únicas: quando uma é transferida, sai da lista. Deixe seu contato e um especialista retorna com a simulação completa.</p>
-<div style="display: flex; gap: 14px; align-items: center">
-<a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; background: #1F9D55; color: #FFFFFF; text-decoration: none; padding: 16px 24px; border-radius: 14px; font-weight: 700">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
-Falar com especialista · (11) 94024-9327
-</a>
-</div>
-</div>
-<form style="padding: 44px; border-radius: 32px; background: #FFFFFF; border: 1px solid #E6E2D8; box-shadow: 0 40px 80px -40px rgba(11,20,55,0.35); display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="f7-nome" style="font-size: 14px; font-weight: 700">Nome completo</label>
-<input id="f7-nome" type="text" placeholder="Como podemos te chamar?" style="padding: 16px 18px; border-radius: 14px; border: 1px solid #D5D0C3; font-size: 16px; font-family: inherit; background: #FBFAF7">
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="f7-whats" style="font-size: 14px; font-weight: 700">WhatsApp</label>
-<input id="f7-whats" type="tel" placeholder="(00) 00000-0000" style="padding: 16px 18px; border-radius: 14px; border: 1px solid #D5D0C3; font-size: 16px; font-family: inherit; background: #FBFAF7">
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="f7-interesse" style="font-size: 14px; font-weight: 700">Tenho interesse em</label>
-<select id="f7-interesse" style="padding: 16px 18px; border-radius: 14px; border: 1px solid #D5D0C3; font-size: 16px; font-family: inherit; background: #FBFAF7; color: #0B1437">
-<option>Carta GPR-5228 · R$ 459.600</option>
-<option>Carta JEF-7339 · R$ 460.000</option>
-<option>Carta HQB-0686 · R$ 341.500</option>
-<option>Outras cartas contempladas</option>
-<option>Cota de consórcio nova</option>
-<option>Seguro auto</option>
-<option>Seguro de vida</option>
-<option>Seguro residencial</option>
-</select>
-</div>
-<button type="button" class="btn-gold" style="margin-top: 6px; padding: 18px; border: none; border-radius: 14px; background: #F5B82E; color: #0B1437; font-size: 17px; font-weight: 800; font-family: inherit; cursor: pointer; transition: all .25s">Quero minha simulação</button>
-<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5B6380; text-align: center">Seus dados são usados apenas para o contato sobre esta simulação.</p>
+<button type="button" id="sim-btn" class="btn btn-gold">Analisar meu cenário</button>
 </form>
+<div class="sim-side">
+<img src="images/hero.jpg" alt="Casa moderna ao entardecer">
+<span class="tag">Casal • Imóvel • Planejamento</span>
+<div class="sim-res" id="sim-res" hidden>
+<span class="eyebrow">Seu cenário</span>
+<div><span class="res-sub">Imóvel que cabe no seu planejamento</span><div class="res-big"><span data-v="imovelMax"></span></div><span class="res-sub">Parcela de referência: <span data-v="parcMax"></span> (30% da renda)</span></div>
+<div class="res-grid"><div><small>Parcela estimada</small><b><span data-v="parcela"></span></b></div><div><small>Renda comprometida</small><b><span data-v="comp"></span></b></div><div><small>Valor a financiar</small><b><span data-v="fin"></span></b></div><div><small>Prazo</small><b><span data-v="prazo"></span></b></div></div>
+<p class="res-msg"><span data-v="msg"></span></p>
+<a id="sim-wa" href="#" target="_blank" rel="noopener" class="btn btn-gold">Falar com Fábio sobre este cenário</a>
+<p class="res-note">Estimativa pela Tabela Price com juros de referência de 10,99% a.a., sem seguros obrigatórios e TR. Não é proposta de crédito.</p>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ============ FOOTER ============ -->
-<footer style="flex-grow: 1; padding: 56px 80px; background: #070C24; color: #9FA9CC; display: flex; flex-direction: column; gap: 28px">
-<div style="display: flex; justify-content: space-between; align-items: center">
-<div style="display: flex; align-items: center; gap: 12px">
-<div style="width: 40px; height: 40px; border-radius: 11px; background: #F5B82E; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 16px; color: #0B1437">F7</div>
-<span style="font-family: 'Sora', sans-serif; font-weight: 700; font-size: 18px; color: #FFFFFF">Mirar Prime</span>
-</div>
-<div style="display: flex; gap: 32px; font-size: 14px">
-<a href="#cartas" style="color: #C9D1EA; text-decoration: none">Cartas contempladas</a>
-<a href="#cotas" style="color: #C9D1EA; text-decoration: none">Cotas</a>
-<a href="#seguros" style="color: #C9D1EA; text-decoration: none">Seguros</a>
-<a href="#contato" style="color: #C9D1EA; text-decoration: none">Contato</a>
+<!-- ESCOLHA CONSCIENTE -->
+<section class="sec gray">
+<div class="wrap">
+<span class="eyebrow">Escolha consciente</span>
+<h2>Qual caminho pode fazer sentido para o seu objetivo?</h2>
+<div class="grid g3 mt">
+<article class="card"><div class="card-img"><img src="images/assinatura.jpg" alt="Assinatura de financiamento"><span class="tag">Financiamento</span></div><div class="card-body"><h3>Financiamento</h3><p>Uma alternativa para quem busca aquisição com crédito estruturado e prazo definido.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/consultoria.jpg" alt="Planejamento com consultor"><span class="tag">Planejamento</span></div><div class="card-body"><h3>Consórcio</h3><p>Uma modalidade que pode fazer parte de um planejamento de aquisição.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/hero.jpg" alt="Casa e chave do imóvel"><span class="tag">Chave / Imóvel</span></div><div class="card-body"><h3>Carta contemplada</h3><p>Uma cota já contemplada pode oferecer uma alternativa para determinados objetivos.</p></div></article>
 </div>
 </div>
-<div style="height: 1px; background: #1A2450"></div>
-<p style="margin: 0; font-size: 12px; line-height: 1.7; max-width: 1100px">F7 Mirar Prime · CNPJ [SEU CNPJ] · [CIDADE/UF]. A F7 Mirar Prime intermedeia a negociação de cotas de consórcio e a contratação de seguros; o crédito é concedido pela administradora do grupo e as apólices são emitidas pela seguradora escolhida. Transferências de cotas estão sujeitas à aprovação da administradora. Valores das cartas exibidos conforme informados pelo fornecedor e podem mudar sem aviso.</p>
+</section>
+
+<!-- PROTEÇÃO -->
+<section id="seguros" class="sec">
+<div class="wrap">
+<span class="eyebrow">Proteção</span>
+<h2>Proteção para pessoas e patrimônio.</h2>
+<div class="grid g4 mt">
+<article class="card"><div class="card-img"><img src="images/carro.jpg" alt="Carro em rua da cidade"><span class="tag">Auto</span></div><div class="card-body"><h3>Auto</h3><p>Proteção para seu veículo.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/familia.jpg" alt="Família reunida"><span class="tag">Família</span></div><div class="card-body"><h3>Vida</h3><p>Proteção para você e sua família.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/casa.jpg" alt="Interior de residência"><span class="tag">Residência</span></div><div class="card-body"><h3>Residencial</h3><p>Proteção para seu patrimônio.</p></div></article>
+<article class="card"><div class="card-img"><img src="images/empresa.jpg" alt="Empresa em operação"><span class="tag">Empresa</span></div><div class="card-body"><h3>Empresarial</h3><p>Proteção para operações e patrimônio empresarial.</p></div></article>
+</div>
+</div>
+</section>
+
+<!-- POR QUE -->
+<section class="sec gray">
+<div class="wrap">
+<span class="eyebrow">Por que a F7 Mirar Prime?</span>
+<h2>Experiência com proximidade.</h2>
+<div class="grid g5 mt">
+<div class="why"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg><h3>Humano</h3><p>Você conversa com pessoas, não apenas com formulários.</p></div>
+<div class="why"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><h3>Consultivo</h3><p>Entendemos o objetivo antes de apresentar alternativas.</p></div>
+<div class="why"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg><h3>Comparativo</h3><p>Avaliamos possibilidades dentro do cenário apresentado.</p></div>
+<div class="why"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg><h3>Transparente</h3><p>Informações claras para apoiar sua decisão.</p></div>
+<div class="why"><strong class="big">20+</strong><h3>Experiência</h3><p>Duas décadas de atuação de Fábio no crédito.</p></div>
+</div>
+</div>
+</section>
+
+<!-- DEPOIMENTOS (preencher com depoimentos reais antes de exibir) -->
+<section class="sec" id="depoimentos" hidden>
+<div class="wrap">
+<span class="eyebrow">Experiências</span>
+<h2>Quem já passou por aqui.</h2>
+<div class="grid g3 mt">
+<blockquote class="quote"><div class="avatar"></div><p>"[Depoimento real do cliente]"</p><cite>[Nome] • Cliente PF</cite></blockquote>
+<blockquote class="quote"><div class="avatar"></div><p>"[Depoimento real do cliente]"</p><cite>[Nome] • Cliente PF</cite></blockquote>
+<blockquote class="quote"><div class="avatar"></div><p>"[Depoimento real do cliente]"</p><cite>[Nome] • Cliente PJ</cite></blockquote>
+</div>
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sec">
+<div class="wrap split">
+<div class="ph-photo tall">
+<div class="ph-inner"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></div>
+<span class="tag">Foto — Fábio em ambiente corporativo</span>
+</div>
+<div class="split-txt">
+<span class="eyebrow">Quem está por trás</span>
+<h2>Prazer, eu sou Fábio Miranda.</h2>
+<p class="muted">Há 20 anos atuo no mercado de crédito. Ao longo dessa trajetória, aprendi que cada cliente possui uma realidade diferente.</p>
+<p class="muted">Por isso, acredito que crédito não deve começar pela oferta de um produto, mas pela compreensão do objetivo.</p>
+<p class="muted">Hoje, à frente da F7 Mirar Prime, meu propósito é unir experiência, atendimento humano e diferentes soluções financeiras para ajudar pessoas e empresas a encontrarem caminhos mais adequados para seus projetos.</p>
+</div>
+</div>
+</section>
+
+<!-- PARA VOCÊ / EMPRESA -->
+<section class="sec">
+<div class="wrap grid g2">
+<a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="duo"><img src="images/familia.jpg" alt="Família em casa"><div class="duo-txt"><h3>Para você</h3><p>Crédito, aquisição, proteção e planejamento patrimonial.</p></div></a>
+<a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="duo"><img src="images/empresa.jpg" alt="Empresário no escritório"><div class="duo-txt"><h3>Para sua empresa</h3><p>Crédito PJ, estruturação, capital e soluções para crescimento.</p></div></a>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="wrap cta-in">
+<span class="eyebrow">Conversa inicial</span>
+<h2>Vamos entender seu objetivo?</h2>
+<p>Conte o que você está planejando. A partir disso, avaliamos quais soluções podem fazer sentido para o seu cenário.</p>
+<a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener" class="btn btn-gold">Falar com Fábio</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+<div class="wrap foot-grid">
+<div><div class="brand light">F7 MIRAR <span>PRIME</span></div><p>Soluções Financeiras<br>Crédito • Patrimônio • Proteção • Planejamento</p></div>
+<div><h4>Soluções</h4><a href="#solucoes">Crédito</a><a href="#cartas">Consórcios</a><a href="#simulador">Financiamentos</a><a href="#seguros">Seguros</a></div>
+<div><h4>Atendimento</h4><a href="https://wa.me/5511940249327?text=Ol%C3%A1%2C%20F%C3%A1bio!%20Vim%20pelo%20site%20da%20F7%20Mirar%20Prime%20e%20quero%20conversar%20sobre%20meu%20objetivo." target="_blank" rel="noopener">WhatsApp</a><a href="#">Instagram</a><a href="#">Facebook</a><a href="#contato">Contato</a></div>
+<div><h4>Validação</h4><a href="#">SmartCred São Paulo — Jaraguá</a><a href="#">LinkedIn de Fábio Miranda</a><a href="#">QR Codes de validação</a></div>
+</div>
+<div class="wrap foot-copy" id="contato">© 2026 F7 Mirar Prime — Soluções Financeiras. WhatsApp (11) 94024-9327. Valores e condições sujeitos à análise e confirmação no atendimento.</div>
 </footer>
 
 </div>
 
 <script>
-(function(){
-var st={mode:'A',renda:'15000',imovel:'600000',entrada:'',fgts:'',pctEnt:20,taxa:'10,99',prazo:'30',comp:30};
-var $=function(id){return document.getElementById(id)};
-var dig=function(v){return String(v||'').replace(/\D/g,'')};
-var num=function(v){return Number(dig(v))||0};
-var txt=function(v){return dig(v)?'R$ '+Number(dig(v)).toLocaleString('pt-BR'):''};
-var brl=function(n){return 'R$ '+Math.round(n).toLocaleString('pt-BR')};
-var brl2=function(n){return 'R$ '+n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})};
-function money(id,key){var el=$(id);el.value=txt(st[key]);el.addEventListener('input',function(){st[key]=dig(el.value);el.value=txt(st[key]);calc();});}
-money('sim-renda','renda');money('sim-imovel','imovel');money('sim-entrada','entrada');money('sim-fgts','fgts');
-$('sim-taxa').value=st.taxa;$('sim-taxa').addEventListener('input',function(e){st.taxa=e.target.value;calc();});
-$('sim-prazo').addEventListener('change',function(e){st.prazo=e.target.value;calc();});
-$('sim-pct').addEventListener('input',function(e){st.pctEnt=Number(e.target.value);calc();});
-$('sim-comp').addEventListener('input',function(e){st.comp=Number(e.target.value);calc();});
-function tab(m){st.mode=m;var on='3px solid #F5B82E',off='3px solid transparent';
- $('tabA').style.borderBottom=m==='A'?on:off;$('tabA').style.color=m==='A'?'#0B1437':'#5B6380';$('tabA').setAttribute('aria-selected',m==='A');
- $('tabB').style.borderBottom=m==='B'?on:off;$('tabB').style.color=m==='B'?'#0B1437':'#5B6380';$('tabB').setAttribute('aria-selected',m==='B');
- document.querySelectorAll('[data-mode]').forEach(function(d){d.hidden=d.getAttribute('data-mode')!==m});calc();}
-$('tabA').addEventListener('click',function(){tab('A')});$('tabB').addEventListener('click',function(){tab('B')});
-function put(k,v){document.querySelectorAll('[data-v="'+k+'"]').forEach(function(e){e.textContent=v})}
-function calc(){
- var taxa=parseFloat(String(st.taxa).replace(',','.'));if(!(taxa>0))taxa=10.99;
- var n=Number(st.prazo)*12,i=Math.pow(1+taxa/100,1/12)-1,f=(1-Math.pow(1+i,-n))/i,comp=st.comp,pct=st.pctEnt/100,E=num(st.entrada)+num(st.fgts),usaE=E>0,imovel,entrada,fin,parcela,renda;
- if(st.mode==='A'){renda=num(st.renda);parcela=renda*comp/100;fin=parcela*f;imovel=usaE?fin+E:(pct>=1?0:fin/(1-pct));entrada=usaE?E:imovel*pct;}
- else{imovel=num(st.imovel);entrada=usaE?Math.min(E,imovel):imovel*pct;fin=Math.max(imovel-entrada,0);parcela=fin/f;renda=parcela/(comp/100);}
- var juros=Math.max(parcela*n-fin,0),total=parcela*n+entrada,pr=imovel>0?Math.round(entrada/imovel*100):0,isA=st.mode==='A';
- var gl='Confortável',gc='#15803D';if(comp>20){gl='Moderado';gc='#A16207'}if(comp>27){gl='No limite dos bancos (30%)';gc='#C2410C'}if(comp>30){gl='Acima do limite dos bancos';gc='#B91C1C'}
- put('pctEnt',st.pctEnt);put('comp',comp);
- put('entradaHint',usaE?'Usando o valor informado: '+pr+'% do imóvel.':'Ou deixe em branco e use o % abaixo.');
- put('bigLabel',isA?'Imóvel máximo estimado':'Renda familiar mínima');put('bigVal',isA?brl(imovel):brl(renda));
- put('bigSub',taxa.toLocaleString('pt-BR')+'% a.a. · '+st.prazo+' anos · Tabela Price');
- put('secLabel',isA?'Parcela máxima ('+comp+'% da renda)':'Parcela mensal estimada');put('secVal',brl2(parcela)+'/mês');
- put('secSub','Entrada: '+brl(entrada)+' · Financiado: '+brl(fin));
- put('finTxt',brl(fin));put('entTxt',brl(entrada));put('jurosTxt',brl(juros));put('totalTxt',brl(total));
- var gLab=$('sim-gauge-label');gLab.textContent=gl;gLab.style.color=gc;
- $('sim-marker').style.left=Math.min(100,Math.max(0,(comp-10)/25*100))+'%';
- var msg=isA?'Olá! Simulei no site da F7 Mirar Prime: renda de '+brl(renda)+', imóvel estimado de '+brl(imovel)+'. Quero comparar com uma carta contemplada.':'Olá! Simulei no site da F7 Mirar Prime: imóvel de '+brl(imovel)+', renda necessária de '+brl(renda)+'. Quero comparar com uma carta contemplada.';
- $('sim-wa').href='https://wa.me/5511940249327?text='+encodeURIComponent(msg);
+function f7Calc(st){
+ var dig=function(v){return String(v||'').replace(/\D/g,'')};
+ var num=function(v){return Number(dig(v))||0};
+ var brl=function(n){return 'R$ '+Math.round(n).toLocaleString('pt-BR')};
+ var brl2=function(n){return 'R$ '+n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})};
+ var R=num(st.renda),V=num(st.imovel),E=num(st.entrada),n=Number(st.prazo)||120;
+ var i=Math.pow(1.1099,1/12)-1,f=(1-Math.pow(1+i,-n))/i;
+ var parcMax=R*0.3,imovelMax=parcMax*f+E;
+ var fin=Math.max(V-E,0),parc=V>0?fin/f:0,comp=R>0&&V>0?parc/R*100:0;
+ var msg;
+ if(!R){msg='Informe sua renda mensal para estimarmos quanto cabe no seu planejamento.';}
+ else if(!V){msg='Com essa renda, a parcela de referência dos bancos (30%) é de '+brl2(parcMax)+'. Informe o valor do imóvel para comparar.';}
+ else if(comp<=30){msg='A parcela estimada fica dentro dos 30% da renda que os bancos costumam aceitar. Vamos avaliar juntos qual caminho tem o melhor custo: financiamento, consórcio ou carta contemplada.';}
+ else{msg='A parcela estimada passa de 30% da renda. Vale avaliar entrada maior, prazo maior, consórcio ou uma carta contemplada — e é aí que a conversa consultiva faz diferença.';}
+ var txt='Olá, Fábio! Simulei no site da F7 Mirar Prime: renda de '+brl(R)+(V?', imóvel de '+brl(V):'')+(E?', entrada de '+brl(E):'')+', prazo de '+n+' meses. Quero analisar meu cenário.';
+ return {imovelMax:brl(imovelMax),parcela:V?brl2(parc)+'/mês':'—',comp:V&&R?comp.toFixed(1).replace('.',',')+'%':'—',fin:V?brl(fin):'—',prazo:n+' meses',parcMax:brl2(parcMax)+'/mês',msg:msg,wa:'https://wa.me/5511940249327?text='+encodeURIComponent(txt)};
 }
-tab('A');
+
+(function(){
+ var st={renda:'10000',imovel:'',entrada:'',prazo:'120'};
+ var $=function(id){return document.getElementById(id)};
+ var dig=function(v){return String(v||'').replace(/\D/g,'')};
+ var txt=function(v){return dig(v)?'R$ '+Number(dig(v)).toLocaleString('pt-BR'):''};
+ ['renda','imovel','entrada'].forEach(function(k){var el=$('sim-'+k);el.value=txt(st[k]);el.addEventListener('input',function(){st[k]=dig(el.value);el.value=txt(st[k]);if(!$('sim-res').hidden)show();});});
+ $('sim-prazo').addEventListener('change',function(e){st.prazo=e.target.value;if(!$('sim-res').hidden)show();});
+ function show(){var r=f7Calc(st);Object.keys(r).forEach(function(k){document.querySelectorAll('[data-v="'+k+'"]').forEach(function(e){e.textContent=r[k]})});$('sim-wa').href=r.wa;$('sim-res').hidden=false;}
+ $('sim-btn').addEventListener('click',function(){show();if(window.innerWidth<820)$('sim-res').scrollIntoView({behavior:'smooth',block:'center'});});
 })();
 </script>
 </body>
